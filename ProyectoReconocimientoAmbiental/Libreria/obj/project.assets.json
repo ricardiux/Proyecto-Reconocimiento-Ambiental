@@ -3708,10 +3708,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sugey\\Source\\Repos\\ProyectoReconocimientoAmbiental\\ProyectoReconocimientoAmbiental\\Libreria\\Libreria.csproj",
+      "projectUniqueName": "C:\\Users\\Sugey\\Source\\Repos\\Proyecto-Reconocimiento-Ambiental\\ProyectoReconocimientoAmbiental\\Libreria\\Libreria.csproj",
       "projectName": "Libreria",
-      "projectPath": "C:\\Users\\Sugey\\Source\\Repos\\ProyectoReconocimientoAmbiental\\ProyectoReconocimientoAmbiental\\Libreria\\Libreria.csproj",
-      "outputPath": "C:\\Users\\Sugey\\Source\\Repos\\ProyectoReconocimientoAmbiental\\ProyectoReconocimientoAmbiental\\Libreria\\obj\\",
+      "projectPath": "C:\\Users\\Sugey\\Source\\Repos\\Proyecto-Reconocimiento-Ambiental\\ProyectoReconocimientoAmbiental\\Libreria\\Libreria.csproj",
+      "outputPath": "C:\\Users\\Sugey\\Source\\Repos\\Proyecto-Reconocimiento-Ambiental\\ProyectoReconocimientoAmbiental\\Libreria\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.4"
