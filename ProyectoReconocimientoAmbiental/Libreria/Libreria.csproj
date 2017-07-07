@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Class1.cs" />
+    <Compile Include="Business\GuiaBusiness.cs" />
     <Compile Include="Data\Class1.cs" />
+    <Compile Include="Domain\AreaTematica.cs" />
     <Compile Include="Domain\Guia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
