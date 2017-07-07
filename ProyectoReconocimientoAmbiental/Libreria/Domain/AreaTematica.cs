@@ -10,7 +10,7 @@ namespace Libreria.Domain
     {
 
         private int codAreaTematica;
-        private int nombreTematica;
+        private String nombreTematica;
 
         private Guia guia;
 
@@ -18,8 +18,15 @@ namespace Libreria.Domain
             Guia = new Guia();
         }
 
+        public AreaTematica(int codAreaTematica, string nombreTematica)
+        {
+            this.codAreaTematica = codAreaTematica;
+            this.nombreTematica = nombreTematica;
+        }
+
         public int CodAreaTematica { get => codAreaTematica; set => codAreaTematica = value; }
-        public int NombreTematica { get => nombreTematica; set => nombreTematica = value; }
+        
         public Guia Guia { get => guia; set => guia = value; }
+        public string NombreTematica { get => nombreTematica; set => nombreTematica = value; }
     }
 }

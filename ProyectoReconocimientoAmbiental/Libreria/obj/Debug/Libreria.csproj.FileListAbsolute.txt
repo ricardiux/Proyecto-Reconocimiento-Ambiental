@@ -1,0 +1,5 @@
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.dll
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.pdb
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.dll
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.pdb

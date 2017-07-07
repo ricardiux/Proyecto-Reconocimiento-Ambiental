@@ -32,3 +32,5 @@ C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconoci
 C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\WebApplication1\obj\Debug\AmbientalApp.csprojResolveAssemblyReference.cache
 C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\WebApplication1\bin\Libreria.dll
+C:\Users\Leo\Documents\Visual Studio 2017\Projects\GitProjects\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\WebApplication1\bin\Libreria.pdb
