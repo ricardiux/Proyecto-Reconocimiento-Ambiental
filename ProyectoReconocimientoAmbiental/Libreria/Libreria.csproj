@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\GuiaBusiness.cs" />
+    <Compile Include="Data\FuncionarioData.cs" />
     <Compile Include="Data\GuiaData.cs" />
     <Compile Include="Domain\AreaTematica.cs" />
     <Compile Include="Domain\Funcionario.cs" />

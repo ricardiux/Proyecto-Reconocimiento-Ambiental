@@ -16,12 +16,13 @@ namespace Libreria.Domain
         private LinkedList<AreaTematica> listaAreasTematicas;
 
         public Guia() {
-            this.listaAreasTematicas = new LinkedList<AreaTematica>();
+            this.ListaAreasTematicas = new LinkedList<AreaTematica>();
         }
 
         public int CodGuia { get => codGuia; set => codGuia = value; }
         public string NombreGuia { get => nombreGuia; set => nombreGuia = value; }
         public int AnioAprobacion { get => anioAprobacion; set => anioAprobacion = value; }
         public bool Vigente { get => vigente; set => vigente = value; }
+        public LinkedList<AreaTematica> ListaAreasTematicas { get => listaAreasTematicas; set => listaAreasTematicas = value; }
     }
 }

@@ -35,19 +35,17 @@ namespace WebApplication1
             GuiaBusiness guiaBusiness = new GuiaBusiness(WebConfigurationManager.ConnectionStrings["GestionAmbiental"].ConnectionString);
             Guia guia = new Guia();
             guia.NombreGuia = tbNombreGuia.Text;
-            guia.AnioAprobacion = DateTime.Parse(tbAnio.Text);
-            guia.Vigencia = true;
+            guia.AnioAprobacion = Int32.Parse(tbAnio.Text);
+            guia.Vigente = true;
 
             for (int i = 0; i < lbAreasTematicas.Items.Count; i++)
             {
                 
-                guia.AreasTematicas.AddLast(new AreaTematica(0, lbAreasTematicas.Items[i].Text));
+                guia.ListaAreasTematicas.AddLast(new AreaTematica(0, lbAreasTematicas.Items[i].Text));
 
-            }
-            
+            }            
 
-            guiaBusiness.IngresarGuiaAmbiental(guia);
-            
+            guiaBusiness.IngresarGuiaAmbiental(guia);            
    
         }
     }

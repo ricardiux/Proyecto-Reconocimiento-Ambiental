@@ -30,7 +30,7 @@ namespace Libreria.Data
 
             cmdInsertarGuia.Parameters.Add(new SqlParameter("@nombre_guia", guia.NombreGuia));
             cmdInsertarGuia.Parameters.Add(new SqlParameter("@anio_aprobacion", guia.AnioAprobacion));
-            cmdInsertarGuia.Parameters.Add(new SqlParameter("@vigencia", guia.Vigencia));
+            cmdInsertarGuia.Parameters.Add(new SqlParameter("@vigencia", guia.Vigente));
             conexion.Open();
             SqlTransaction transaction = conexion.BeginTransaction();
 
@@ -41,7 +41,7 @@ namespace Libreria.Data
 
                 guia.CodGuia = Int32.Parse(cmdInsertarGuia.Parameters["@cod_guia"].Value.ToString());
 
-                foreach (AreaTematica areas in guia.AreasTematicas)
+                foreach (AreaTematica areas in guia.ListaAreasTematicas)
                 {
                     SqlCommand cmdInsertarAreas = new SqlCommand("insertar_area_tematica", conexion);
                     cmdInsertarAreas.Transaction = transaction;

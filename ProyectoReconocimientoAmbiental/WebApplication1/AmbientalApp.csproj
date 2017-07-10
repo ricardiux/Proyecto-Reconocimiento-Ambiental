@@ -65,8 +65,113 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery.sidr.dark.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GuiaAmbiental.aspx" />
+    <Content Include="images\about-us\about.jpg" />
+    <Content Include="images\about-us\community.jpg" />
+    <Content Include="images\about-us\mission.jpg" />
+    <Content Include="images\blog\1.jpg" />
+    <Content Include="images\blog\2.jpg" />
+    <Content Include="images\blog\3.jpg" />
+    <Content Include="images\clients\client-bg.jpg" />
+    <Content Include="images\clients\client1.jpg" />
+    <Content Include="images\clients\client2.jpg" />
+    <Content Include="images\clients\client3.jpg" />
+    <Content Include="images\home-pattern.png" />
+    <Content Include="images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="images\ico\favicon.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\our-team\member1.jpg" />
+    <Content Include="images\our-team\member2.jpg" />
+    <Content Include="images\our-team\member3.jpg" />
+    <Content Include="images\our-team\member4.jpg" />
+    <Content Include="images\pattern.png" />
+    <Content Include="images\portfolio\1.jpg" />
+    <Content Include="images\portfolio\10.jpg" />
+    <Content Include="images\portfolio\11.jpg" />
+    <Content Include="images\portfolio\12.jpg" />
+    <Content Include="images\portfolio\2.jpg" />
+    <Content Include="images\portfolio\3.jpg" />
+    <Content Include="images\portfolio\4.jpg" />
+    <Content Include="images\portfolio\5.jpg" />
+    <Content Include="images\portfolio\6.jpg" />
+    <Content Include="images\portfolio\7.jpg" />
+    <Content Include="images\portfolio\8.jpg" />
+    <Content Include="images\portfolio\9.jpg" />
+    <Content Include="images\portfolio\big-item.jpg" />
+    <Content Include="images\portfolio\big-item2.jpg" />
+    <Content Include="images\portfolio\big-item3.jpg" />
+    <Content Include="images\portfolio\big-item4.jpg" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="images\prettyPhoto\default\loader.gif" />
+    <Content Include="images\prettyPhoto\default\sprite.png" />
+    <Content Include="images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="images\services\service-bg.jpg" />
+    <Content Include="images\slider\slide1.jpg" />
+    <Content Include="images\slider\slide2.jpg" />
+    <Content Include="images\slider\slide3.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.parallax.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\smoothscroll.js" />
     <Content Include="packages.config" />
+    <Content Include=".DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="MasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,6 +180,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recinto.aspx" />
+    <Content Include="send-mail.php" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,7 +192,21 @@
     <Compile Include="GuiaAmbiental.aspx.designer.cs">
       <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recinto.aspx.cs">
+      <DependentUpon>Recinto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recinto.aspx.designer.cs">
+      <DependentUpon>Recinto.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Libreria\Libreria.csproj">
