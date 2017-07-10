@@ -1,16 +1,16 @@
-﻿using Libreria.Business;
+﻿using System;
+using Libreria.Business;
 using Libreria.Domain;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
 
 namespace WebApplication1
 {
-    public partial class GuiaAmbiental : System.Web.UI.Page
+    public partial class GuiaAmbientalMaster : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,15 +19,13 @@ namespace WebApplication1
 
         protected void btAgregar_Click(object sender, EventArgs e)
         {
-           
-           int CantidadAreasTematicas= Int32.Parse(lbAreasTematicas.Items.Count.ToString());
-            if (CantidadAreasTematicas<9 && tbNombreArea.Text!="") {
+            int CantidadAreasTematicas = Int32.Parse(lbAreasTematicas.Items.Count.ToString());
+            if (CantidadAreasTematicas < 9 && tbNombreArea.Text != "")
+            {
                 lbEncargados.Items.Add(ddlEncargado.SelectedValue);
                 lbAreasTematicas.Items.Add(tbNombreArea.Text);
                 tbNombreArea.Text = "";
             }
-            
-
 
         }
 
@@ -42,17 +40,16 @@ namespace WebApplication1
             for (int i = 0; i < lbAreasTematicas.Items.Count; i++)
             {
                 AreaTematica areaTematica = new AreaTematica();
-                
+
                 areaTematica.CodAreaTematica = 0;
                 areaTematica.NombreTematica = lbAreasTematicas.Items[i].Text;
                 int codFuncionario = Int32.Parse(lbEncargados.Items[i].Text);
-                areaTematica.Funcionario.CodFuncionario= codFuncionario;
+                areaTematica.Funcionario.CodFuncionario = codFuncionario;
                 guia.ListaAreasTematicas.AddLast(areaTematica);
-            
-            }            
 
-            guiaBusiness.IngresarGuiaAmbiental(guia);            
-   
+            }
+
+            guiaBusiness.IngresarGuiaAmbiental(guia);
         }
     }
 }

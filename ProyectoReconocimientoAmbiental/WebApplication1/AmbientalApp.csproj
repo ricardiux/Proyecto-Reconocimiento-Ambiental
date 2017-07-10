@@ -73,9 +73,10 @@
     <Content Include="css\prettyPhoto.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GuiaAmbiental.aspx" />
+    <Content Include="GuiaAmbientalMaster.aspx" />
     <Content Include="images\about-us\about.jpg" />
     <Content Include="images\about-us\community.jpg" />
     <Content Include="images\about-us\mission.jpg" />
@@ -185,12 +186,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GuiaAmbiental.aspx.cs">
-      <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
+    <Compile Include="GuiaAmbientalMaster.aspx.cs">
+      <DependentUpon>GuiaAmbientalMaster.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GuiaAmbiental.aspx.designer.cs">
-      <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
+    <Compile Include="GuiaAmbientalMaster.aspx.designer.cs">
+      <DependentUpon>GuiaAmbientalMaster.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -213,6 +214,9 @@
       <Project>{d406d273-ebcd-46dd-b0ed-b0d73a4b21c0}</Project>
       <Name>Libreria</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
