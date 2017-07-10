@@ -11,19 +11,17 @@ namespace Libreria.Domain
 
         private int codGuia;
         private String nombreGuia;
-        private DateTime anioAprobacion;
-        private bool vigencia;
-
-        private LinkedList<AreaTematica> areasTematicas;
+        private int anioAprobacion;
+        private Boolean vigente;
+        private LinkedList<AreaTematica> listaAreasTematicas;
 
         public Guia() {
-            AreasTematicas = new LinkedList<AreaTematica>();
+            this.listaAreasTematicas = new LinkedList<AreaTematica>();
         }
 
         public int CodGuia { get => codGuia; set => codGuia = value; }
         public string NombreGuia { get => nombreGuia; set => nombreGuia = value; }
-        public DateTime AnioAprobacion { get => anioAprobacion; set => anioAprobacion = value; }
-        public bool Vigencia { get => vigencia; set => vigencia = value; }
-        public LinkedList<AreaTematica> AreasTematicas { get => areasTematicas; set => areasTematicas = value; }
+        public int AnioAprobacion { get => anioAprobacion; set => anioAprobacion = value; }
+        public bool Vigente { get => vigente; set => vigente = value; }
     }
 }

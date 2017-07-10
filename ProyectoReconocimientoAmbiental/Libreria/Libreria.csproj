@@ -43,7 +43,10 @@
     <Compile Include="Business\GuiaBusiness.cs" />
     <Compile Include="Data\GuiaData.cs" />
     <Compile Include="Domain\AreaTematica.cs" />
+    <Compile Include="Domain\Funcionario.cs" />
     <Compile Include="Domain\Guia.cs" />
+    <Compile Include="Domain\Recinto.cs" />
+    <Compile Include="Domain\Rol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
