@@ -40,10 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\AccionAdministrativaBussines.cs" />
+    <Compile Include="Business\ActividadBussines.cs" />
+    <Compile Include="Business\ArchivoBussines.cs" />
+    <Compile Include="Business\DocumentoBussines.cs" />
     <Compile Include="Business\GuiaBusiness.cs" />
+    <Compile Include="Business\NormativaBussines.cs" />
+    <Compile Include="Data\AccionAdministrativaData.cs" />
+    <Compile Include="Data\ActividadData.cs" />
+    <Compile Include="Data\ArchivoData.cs" />
+    <Compile Include="Data\DocumentoData.cs" />
     <Compile Include="Data\FuncionarioData.cs" />
     <Compile Include="Data\GuiaData.cs" />
+    <Compile Include="Data\NormativaData.cs" />
+    <Compile Include="Domain\Actividad.cs" />
+    <Compile Include="Domain\Archivo.cs" />
     <Compile Include="Domain\AreaTematica.cs" />
+    <Compile Include="Domain\AccionAdministrativa.cs" />
+    <Compile Include="Domain\Documento.cs" />
+    <Compile Include="Domain\Normativa.cs" />
     <Compile Include="Domain\Funcionario.cs" />
     <Compile Include="Domain\Guia.cs" />
     <Compile Include="Domain\Recinto.cs" />
