@@ -8,3 +8,8 @@ C:\Users\Sugey\Source\Repos\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimi
 C:\Users\Sugey\Source\Repos\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.pdb
 C:\Users\Sugey\Source\Repos\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.dll
 C:\Users\Sugey\Source\Repos\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.pdb
+C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.dll
+C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.pdb
+C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.dll
+C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.pdb

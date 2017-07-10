@@ -30,11 +30,17 @@
             <asp:Label ID="Label4" runat="server" Text="Nombre area tematica:"></asp:Label>
 &nbsp;
             <asp:TextBox ID="tbNombreArea" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btAgregar" runat="server" OnClick="btAgregar_Click" Text="Agregar" />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            Encargado del area:<asp:DropDownList ID="ddlEncargado" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre_funcionario" DataValueField="cod_funcionario" Height="16px" Width="152px">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GestionAmbiental %>" SelectCommand="Obtener_Funcionarios" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+            <br />
+            <br />
+&nbsp;<asp:Button ID="btAgregar" runat="server" OnClick="btAgregar_Click" Text="Agregar" />
             <br />
             <br />
             <asp:ListBox ID="lbAreasTematicas" runat="server" CssClass="auto-style1" Height="153px" Width="192px"></asp:ListBox>
+            <asp:ListBox ID="lbEncargados" runat="server" Visible="False"></asp:ListBox>
             <br />
             <br />
             <asp:Button ID="tbGuardar" runat="server" OnClick="tbGuardar_Click" Text="Guardar" />

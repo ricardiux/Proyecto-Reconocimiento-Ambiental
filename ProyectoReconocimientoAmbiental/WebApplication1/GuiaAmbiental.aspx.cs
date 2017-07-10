@@ -22,6 +22,7 @@ namespace WebApplication1
            
            int CantidadAreasTematicas= Int32.Parse(lbAreasTematicas.Items.Count.ToString());
             if (CantidadAreasTematicas<9 && tbNombreArea.Text!="") {
+                lbEncargados.Items.Add(ddlEncargado.SelectedValue);
                 lbAreasTematicas.Items.Add(tbNombreArea.Text);
                 tbNombreArea.Text = "";
             }
@@ -40,9 +41,14 @@ namespace WebApplication1
 
             for (int i = 0; i < lbAreasTematicas.Items.Count; i++)
             {
+                AreaTematica areaTematica = new AreaTematica();
                 
-                guia.ListaAreasTematicas.AddLast(new AreaTematica(0, lbAreasTematicas.Items[i].Text));
-
+                areaTematica.CodAreaTematica = 0;
+                areaTematica.NombreTematica = lbAreasTematicas.Items[i].Text;
+                int codFuncionario = Int32.Parse(lbEncargados.Items[i].Text);
+                areaTematica.Funcionario.CodFuncionario= codFuncionario;
+                guia.ListaAreasTematicas.AddLast(areaTematica);
+            
             }            
 
             guiaBusiness.IngresarGuiaAmbiental(guia);            

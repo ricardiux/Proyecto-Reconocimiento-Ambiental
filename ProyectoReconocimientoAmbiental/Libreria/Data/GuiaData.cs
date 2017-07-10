@@ -28,9 +28,13 @@ namespace Libreria.Data
             parametroCodGuia.Direction = System.Data.ParameterDirection.Output;
             cmdInsertarGuia.Parameters.Add(parametroCodGuia);
 
+        
+            cmdInsertarGuia.Parameters.Add(new SqlParameter("@cod_recinto", 1));
             cmdInsertarGuia.Parameters.Add(new SqlParameter("@nombre_guia", guia.NombreGuia));
-            cmdInsertarGuia.Parameters.Add(new SqlParameter("@anio_aprobacion", guia.AnioAprobacion));
-            cmdInsertarGuia.Parameters.Add(new SqlParameter("@vigencia", guia.Vigente));
+
+            cmdInsertarGuia.Parameters.Add(new SqlParameter("@anio_publicacion", guia.AnioAprobacion));
+           cmdInsertarGuia.Parameters.Add(new SqlParameter("@vigente", guia.Vigente));
+
             conexion.Open();
             SqlTransaction transaction = conexion.BeginTransaction();
 
@@ -46,8 +50,9 @@ namespace Libreria.Data
                     SqlCommand cmdInsertarAreas = new SqlCommand("insertar_area_tematica", conexion);
                     cmdInsertarAreas.Transaction = transaction;
                     cmdInsertarAreas.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmdInsertarAreas.Parameters.Add(new SqlParameter("@nombre_tematica", areas.NombreTematica));
-                    cmdInsertarAreas.Parameters.Add(new SqlParameter("@cod_guia",guia.CodGuia));
+                    cmdInsertarAreas.Parameters.Add(new SqlParameter("@cod_funcionario", areas.Funcionario.CodFuncionario));
+                    cmdInsertarAreas.Parameters.Add(new SqlParameter("@nombre_area", areas.NombreTematica));
+                    cmdInsertarAreas.Parameters.Add(new SqlParameter("@cod_guia", guia.CodGuia));
 
                     cmdInsertarAreas.ExecuteNonQuery();
 

@@ -12,8 +12,10 @@ namespace Libreria.Domain
         private int codArea;
         private String nombreTematica;
 
-        public AreaTematica() {
+        private Funcionario funcionario;
 
+        public AreaTematica() {
+            Funcionario = new Funcionario();
         }
 
         public AreaTematica(int codAreaTematica, string nombreTematica)
@@ -24,5 +26,6 @@ namespace Libreria.Domain
 
         public int CodAreaTematica { get => codArea; set => codArea = value; }
         public string NombreTematica { get => nombreTematica; set => nombreTematica = value; }
+        public Funcionario Funcionario { get => funcionario; set => funcionario = value; }
     }
 }
