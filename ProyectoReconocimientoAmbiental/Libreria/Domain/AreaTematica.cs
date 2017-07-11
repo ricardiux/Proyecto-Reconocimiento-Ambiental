@@ -23,7 +23,7 @@ namespace Libreria.Domain
         public AreaTematica(int codArea, string nombreArea, Funcionario funcionario)
         {
             this.codArea = codArea;
-            this.nombreArea = nombreArea;
+            this.nombreTematica = nombreArea;
             this.funcionario = funcionario;
         }
 

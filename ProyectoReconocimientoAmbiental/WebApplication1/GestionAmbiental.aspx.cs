@@ -35,25 +35,34 @@ namespace WebApplication1
         {
             GuiaBusiness guiaBusiness = new GuiaBusiness(WebConfigurationManager.ConnectionStrings["GestionAmbiental"].ConnectionString);
             Guia guia = new Guia();
+           
             guia.NombreGuia = tbNombreGuia.Text;
             guia.AnioAprobacion = Int32.Parse(tbAnio.Text);
             guia.Vigente = true;
 
-            for (int i = 0; i < lbAreasTematicas.Items.Count; i++)
+            if (lbAreasTematicas.Items.Count > -1)
             {
-                AreaTematica areaTematica = new AreaTematica();
+                for (int i = 0; i < lbAreasTematicas.Items.Count; i++)
+                {
+                    AreaTematica areaTematica = new AreaTematica();
 
-                areaTematica.CodArea = 0;
-                areaTematica.NombreTematica = lbAreasTematicas.Items[i].Text;
+                    areaTematica.CodArea = 0;
+                    areaTematica.NombreTematica = lbAreasTematicas.Items[i].Text;
 
-                areaTematica.Funcionario.CodFuncionario = 1;
-                guia.ListaAreasTematicas.AddLast(areaTematica);
+                    areaTematica.Funcionario.CodFuncionario = 1;
+                    guia.ListaAreasTematicas.AddLast(areaTematica);
 
+                }
+
+                guiaBusiness.IngresarGuiaAmbiental(guia, codFuncionario);
+
+                Response.Redirect("~/EncargadosTematicas.aspx?codGuia=" + guia.CodGuia);
+            }
+            else {
+                lbMensaje.Text = "Agregue una area tematica";
             }
 
-            guiaBusiness.IngresarGuiaAmbiental(guia, codFuncionario);
-
-            Response.Redirect("~/EncargadosTematicas.aspx?codGuia=" + guia.CodGuia);
+          
         }
     }
 }

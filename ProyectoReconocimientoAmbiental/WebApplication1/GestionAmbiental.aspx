@@ -12,13 +12,13 @@
                 
             <asp:Label ID="Label1" runat="server" Text="Nombre de la guia:"></asp:Label>
                 <br />
-            <asp:TextBox class="input" ID="tbNombreGuia" runat="server"></asp:TextBox>
+            <asp:TextBox class="input" ID="tbNombreGuia" runat="server" Required="true" ></asp:TextBox>
         <br />
             </div>
         <div>
             <asp:Label ID="Label2" runat="server" Text="Año:"></asp:Label>
             <br />
-            <asp:TextBox class="input" ID="tbAnio" runat="server"></asp:TextBox>
+            <asp:TextBox class="input" ID="tbAnio" runat="server" TextMode="Number" Required="true"></asp:TextBox>
        
         </div>
      
@@ -38,6 +38,7 @@
             
             <br />
             <br />
+            <asp:Label ID="lbMensaje" runat="server" Text=""></asp:Label>
             <asp:Button class="button" ID="tbGuardar" runat="server" OnClick="tbGuardar_Click" Text="Guardar" />
             <br />
       
