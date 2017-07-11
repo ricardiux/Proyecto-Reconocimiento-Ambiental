@@ -27,5 +27,10 @@ namespace Libreria.Business
             areaTematicaData.AsignarEncargadoDeAreaTematica(codFuncionario, codTematica);
         }
 
+        public LinkedList<Criterio> ObtenerCriteriosPorArea(int codArea)
+        {
+            return this.areaTematicaData.ObtenerCriteriosPorArea(codArea);
+        }
+
     }
 }

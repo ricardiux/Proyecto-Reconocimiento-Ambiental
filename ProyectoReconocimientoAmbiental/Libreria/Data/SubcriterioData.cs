@@ -23,8 +23,8 @@ namespace Libreria.Data
             string sqlProcedureInsertarSubcriterio = "insertar_subcriterio";
             SqlCommand comandoInsertarSubcriterio = new SqlCommand(sqlProcedureInsertarSubcriterio, connection);
             comandoInsertarSubcriterio.CommandType = System.Data.CommandType.StoredProcedure;
-            comandoInsertarSubcriterio.Parameters.Add(new SqlParameter("@nombreCriterio", subcriterio.NombreSubcriterio));
-            comandoInsertarSubcriterio.Parameters.Add(new SqlParameter("@codArea", codCriterio));
+            comandoInsertarSubcriterio.Parameters.Add(new SqlParameter("@codCriterio", codCriterio));
+            comandoInsertarSubcriterio.Parameters.Add(new SqlParameter("@nombreSubcriterio", subcriterio.NombreSubcriterio));
             try
             {
                 connection.Open();
