@@ -41,7 +41,7 @@
                             <li class="scroll active"><a href="#">Inicio</a></li>
                             <li class="scroll"><a href="GestionAmbiental.aspx">Agregar Guía Ambiental</a></li>
                             <li class="scroll"><a href="#">Información Recinto</a></li>
-                            <li class="scroll"><a href="#">Agregar Encargado</a></li>
+                            <li class="scroll"><a href="AreasTematicas.aspx">Agregar Encargado</a></li>
                             <li class="scroll"><a href="#">Reporte Guía</a></li>
                             <li class="scroll"><a href="#">Salir</a></li>
                         </ul>
