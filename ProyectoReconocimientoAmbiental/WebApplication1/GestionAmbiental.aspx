@@ -24,7 +24,7 @@
      
             <h5>Areas Tematicas</h5>
             
-            <asp:Label ID="Label4" runat="server" Text="Nombre area tematica:"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Agregue como minimo una area tematica:"></asp:Label>
             <br />
             <asp:TextBox class="input" ID="tbNombreArea" runat="server"></asp:TextBox>
             <br />
@@ -32,6 +32,8 @@
          
             <br />
 &nbsp;<asp:Button ID="btAgregar" runat="server" OnClick="btAgregar_Click" Text="Agregar" />
+
+            <br />
             <br />
             <br />
             <asp:ListBox ID="lbAreasTematicas" runat="server"  Height="153px" Width="192px"></asp:ListBox>
