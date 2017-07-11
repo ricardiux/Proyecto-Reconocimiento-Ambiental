@@ -5,13 +5,11 @@
 
     <div class="content">
 
-    <div class="body">
+        <div class="formGuia">
             <br />
-             <br />
-             <br />
-             <br />
-            <br />
+             
             <div>
+                
             <asp:Label ID="Label1" runat="server" Text="Nombre de la guia:"></asp:Label>
                 <br />
             <asp:TextBox class="input" ID="tbNombreGuia" runat="server"></asp:TextBox>
@@ -42,8 +40,10 @@
             <br />
             <asp:Button class="button" ID="tbGuardar" runat="server" OnClick="tbGuardar_Click" Text="Guardar" />
             <br />
-        </div>
+      
     </div>
+    </div>
+
 
 
 </asp:Content>

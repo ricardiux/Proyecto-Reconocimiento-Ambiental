@@ -40,11 +40,7 @@ namespace Libreria.Data
 
             foreach (DataRow fila in dataSet.Tables["Area_Tematica"].Rows)
             {
-                int codGuia = Int32.Parse(fila["cod_guia"].ToString());
-                String nombreGuia = fila["nombre_guia"].ToString();
-                Guia guia = new Guia();
-                guia.CodGuia = codGuia;
-                guia.NombreGuia = nombreGuia;
+
 
                 int codArea = Int32.Parse(fila["cod_area"].ToString());
                 String nombreArea = fila["nombre_area"].ToString();
@@ -66,7 +62,7 @@ namespace Libreria.Data
 
                 funcionario.Cedula = Int32.Parse(cedula);
 
-                AreaTematica area = new AreaTematica(codArea, nombreArea, guia, funcionario);
+                AreaTematica area = new AreaTematica(codArea, nombreArea, funcionario);
                 areasTematicas.AddLast(area);
 
             }

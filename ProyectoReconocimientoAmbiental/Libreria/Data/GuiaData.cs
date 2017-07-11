@@ -18,7 +18,7 @@ namespace Libreria.Data
             this.cadenaConexion = cadenaConexion;
         }
 
-        public void IngresarGuiaAmbiental(Guia guia)
+        public void IngresarGuiaAmbiental(Guia guia, int codAdministrador)
         {
             SqlConnection conexion = new SqlConnection(cadenaConexion);
             SqlCommand cmdInsertarGuia = new SqlCommand("insertar_guia_ambiental", conexion);
@@ -28,12 +28,12 @@ namespace Libreria.Data
             parametroCodGuia.Direction = System.Data.ParameterDirection.Output;
             cmdInsertarGuia.Parameters.Add(parametroCodGuia);
 
-        
-            cmdInsertarGuia.Parameters.Add(new SqlParameter("@cod_recinto", 1));
+
+            cmdInsertarGuia.Parameters.Add(new SqlParameter("@cod_administrador", codAdministrador));
             cmdInsertarGuia.Parameters.Add(new SqlParameter("@nombre_guia", guia.NombreGuia));
 
             cmdInsertarGuia.Parameters.Add(new SqlParameter("@anio_publicacion", guia.AnioAprobacion));
-           cmdInsertarGuia.Parameters.Add(new SqlParameter("@vigente", guia.Vigente));
+            cmdInsertarGuia.Parameters.Add(new SqlParameter("@vigente", guia.Vigente));
 
             conexion.Open();
             SqlTransaction transaction = conexion.BeginTransaction();
@@ -68,57 +68,10 @@ namespace Libreria.Data
             {
                 conexion.Close();
             }
-            
-        }
-
-        public LinkedList<Guia> BuscarGuiaPorCodigo(int cod_guia)
-        {
-            SqlConnection conexion = new SqlConnection(cadenaConexion);
-
-
-            SqlDataAdapter dataAdapter = new SqlDataAdapter();
-            dataAdapter.SelectCommand = new SqlCommand();
-            dataAdapter.SelectCommand.Connection = conexion;
-            dataAdapter.SelectCommand.CommandText = "obtener_guia_por_cod";
-            dataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
-
-            dataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@cod_Guia", cod_guia));
-
-
-            DataSet dataSet = new DataSet();
-
-            dataAdapter.Fill(dataSet, "Guia");
-
-            LinkedList<Guia> guia = new LinkedList<Guia>();
-
-            foreach (DataRow fila in dataSet.Tables["Guia"].Rows)
-            {
-                int codGuia = Int32.Parse(fila["cod_guia"].ToString());
-                String nombreGuia = fila["nombre_guia"].ToString();
-
-                int codArea = Int32.Parse(fila["cod_area"].ToString());
-                String nombreArea = fila["nombre_area"].ToString();
-                AreaTematica areaTematica = new AreaTematica();
-                areaTematica.CodArea = codArea;
-                areaTematica.NombreTematica = nombreArea;
-
-                int codFuncionario = Int32.Parse(fila["cod_funcionario"].ToString());
-                String nombreFuncionario = fila["nombre_funcionario"].ToString();
-                String cedula = fila["cedula"].ToString();
-                Funcionario funcionario = new Funcionario();
-                funcionario.CodFuncionario = codFuncionario;
-                funcionario.Nombre = nombreFuncionario;
-                funcionario.Cedula = Int32.Parse(cedula);
-
-                Guia guiaActual = new Guia(codGuia, nombreGuia, areaTematica, funcionario);
-                guia.AddLast(guiaActual);
-
-            }
-
-            return guia;
 
         }
 
+        
         public LinkedList<Guia> ObtenerGuiasAmbientales()
         {
 

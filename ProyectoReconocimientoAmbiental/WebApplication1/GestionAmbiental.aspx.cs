@@ -12,9 +12,11 @@ namespace WebApplication1
 {
     public partial class GestionAmbiental : System.Web.UI.Page
     {
+        int codFuncionario = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Funcionario funcionario = (Funcionario)Session["usuario"];
+            codFuncionario = funcionario.CodFuncionario;
         }
 
         protected void btAgregar_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace WebApplication1
 
             }
 
-            guiaBusiness.IngresarGuiaAmbiental(guia);
+            guiaBusiness.IngresarGuiaAmbiental(guia, codFuncionario);
 
             Response.Redirect("~/EncargadosTematicas.aspx?codGuia=" + guia.CodGuia);
         }

@@ -19,9 +19,9 @@ namespace Libreria.Business
 
         }
 
-        public void IngresarGuiaAmbiental(Guia guia)
+        public void IngresarGuiaAmbiental(Guia guia, int codAdministrador)
         {
-            guiaData.IngresarGuiaAmbiental(guia);
+            guiaData.IngresarGuiaAmbiental(guia, codAdministrador);
         }
 
         public LinkedList<Guia> ObtenerGuiasAmbientales()

@@ -19,9 +19,7 @@ namespace WebApplication1
 
                 int codGuia = Int32.Parse(Request.QueryString["codGuia"]);
 
-                //Response.Write("<script>alert('" + codGuia + "');</script>");
-
-
+              
                 AreaTematicaBusiness areaTematicaBusiness = new AreaTematicaBusiness(WebConfigurationManager.ConnectionStrings["GestionAmbiental"].ConnectionString);
 
                 LinkedList<AreaTematica> tematicasEnGuia = new LinkedList<AreaTematica>();
@@ -44,8 +42,6 @@ namespace WebApplication1
             int codFuncionario = Int32.Parse(dropDownList.SelectedValue);
 
             AreaTematicaBusiness areaTematicaBusiness = new AreaTematicaBusiness(WebConfigurationManager.ConnectionStrings["GestionAmbiental"].ConnectionString);
-
-
 
             areaTematicaBusiness.AsignarEncargadoDeAreaTematica(codFuncionario, codArea);
 

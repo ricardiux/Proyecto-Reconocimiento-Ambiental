@@ -27,7 +27,7 @@ namespace Libreria.Domain
             this.nombreGuia = nombreGuia;
         }
 
-        public Guia(int codGuia, string nombreGuia, AreaTematica areaTematica, Funcionario funcionario)
+        public Guia(int codGuia, string nombreGuia, AreaTematica areaTematica)
         {
             this.codGuia = codGuia;
             this.nombreGuia = nombreGuia;

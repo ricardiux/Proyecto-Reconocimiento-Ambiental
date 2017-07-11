@@ -15,6 +15,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet">
     <link href="~/css/mis-estilos.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="https://www.ucr.ac.cr/plantillas/ucr_3/imagenes/ucr-favicon.ico">
