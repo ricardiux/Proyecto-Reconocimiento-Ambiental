@@ -14,14 +14,12 @@ namespace Libreria.Domain
         private String tipoParticipantes;
         private DateTime fecha;
         private String descripcion;
-        private Subcriterio subcriterio;
 
         public Actividad()
         {
-            subcriterio = new Subcriterio();
         }
 
-        public Actividad(int codActividad, string titulo, int cantidadPraticipantes, string tipoParticipantes, DateTime fecha, string descripcion, Subcriterio subcriterio)
+        public Actividad(int codActividad, string titulo, int cantidadPraticipantes, string tipoParticipantes, DateTime fecha, string descripcion)
         {
             this.codActividad = codActividad;
             this.titulo = titulo;
@@ -29,7 +27,6 @@ namespace Libreria.Domain
             this.tipoParticipantes = tipoParticipantes;
             this.fecha = fecha;
             this.descripcion = descripcion;
-            this.subcriterio = subcriterio;
         }
 
         public int CodActividad { get => codActividad; set => codActividad = value; }
@@ -38,6 +35,5 @@ namespace Libreria.Domain
         public string TipoParticipantes { get => tipoParticipantes; set => tipoParticipantes = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
-        public Subcriterio Subcriterio { get => subcriterio; set => subcriterio = value; }
     }
 }

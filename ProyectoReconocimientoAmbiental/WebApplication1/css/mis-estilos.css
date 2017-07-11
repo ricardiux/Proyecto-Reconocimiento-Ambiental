@@ -1,0 +1,48 @@
+﻿body {
+    background-image: url("/images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+#footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.principal {
+    text-align: center;
+    max-width: 100%;
+    align-content: center;
+}
+
+section {
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+.formulario {
+    align-content:center;
+    text-align:center;
+    align-items:center;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.form-control{
+    text-align:center;
+}
+
+

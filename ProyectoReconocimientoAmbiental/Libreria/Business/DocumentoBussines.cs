@@ -13,7 +13,7 @@ namespace Libreria.Business
         private String cadenaConexion;
         private DocumentoData documentoData;
 
-        public ActividadBussines(string cadenaConexion)
+        public DocumentoBussines (string cadenaConexion)
         {
             documentoData = new DocumentoData(cadenaConexion);
         }

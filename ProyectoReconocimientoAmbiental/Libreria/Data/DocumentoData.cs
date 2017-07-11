@@ -23,7 +23,6 @@ namespace Libreria.Data
             cmdDocumento.CommandText = "insertar_documento";
             cmdDocumento.CommandType = System.Data.CommandType.StoredProcedure;
             cmdDocumento.Parameters.Add(new SqlParameter("@codDocumento", documento.CodDocumento));
-            cmdDocumento.Parameters.Add(new SqlParameter("@codSubcriterio", documento.Subcriterio.CodSubcriterio));
             cmdDocumento.Parameters.Add(new SqlParameter("@titulo", documento.Titulo));
             cmdDocumento.Parameters.Add(new SqlParameter("@tipoDocuemnto", documento.TipoDocumento));
             cmdDocumento.Parameters.Add(new SqlParameter("@detalle", documento.Detalle));
@@ -73,7 +72,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     documento.CodDocumento = Int32.Parse(dataReader["cod_documento"].ToString());
-                    documento.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     documento.Titulo = dataReader["titulo"].ToString();
                     documento.TipoDocumento = dataReader["tipo_documento"].ToString();
                     documento.Detalle = dataReader["detalle"].ToString();
@@ -108,7 +106,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     documento.CodDocumento = Int32.Parse(dataReader["cod_documento"].ToString());
-                    documento.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     documento.Titulo = dataReader["titulo"].ToString();
                     documento.TipoDocumento = dataReader["tipo_documento"].ToString();
                     documento.Detalle = dataReader["detalle"].ToString();

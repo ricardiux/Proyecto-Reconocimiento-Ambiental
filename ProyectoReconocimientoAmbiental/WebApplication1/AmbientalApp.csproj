@@ -70,6 +70,7 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\jquery.sidr.dark.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\mis-estilos.css" />
     <Content Include="css\prettyPhoto.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\responsive.css" />
@@ -86,6 +87,8 @@
     <Content Include="images\clients\client1.jpg" />
     <Content Include="images\clients\client2.jpg" />
     <Content Include="images\clients\client3.jpg" />
+    <Content Include="images\fondo.jpg" />
+    <Content Include="images\gestion-ambiental.png" />
     <Content Include="images\home-pattern.png" />
     <Content Include="images\ico\apple-touch-icon-114-precomposed.png" />
     <Content Include="images\ico\apple-touch-icon-144-precomposed.png" />
@@ -157,6 +160,8 @@
     <Content Include="images\slider\slide2.jpg" />
     <Content Include="images\slider\slide3.jpg" />
     <Content Include="index.html" />
+    <Content Include="InicioAdministrador.aspx" />
+    <Content Include="InicioEncargado.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\html5shiv.js" />
     <Content Include="js\jquery.isotope.min.js" />
@@ -166,12 +171,15 @@
     <Content Include="js\main.js" />
     <Content Include="js\respond.min.js" />
     <Content Include="js\smoothscroll.js" />
+    <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include=".DS_Store" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="MasterPage.Master" />
+    <Content Include="Administrador.Master" />
+    <Content Include="Encargado.Master" />
+    <Content Include="Login.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -185,6 +193,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador.Master.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador.Master.designer.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Encargado.Master.cs">
+      <DependentUpon>Encargado.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Encargado.Master.designer.cs">
+      <DependentUpon>Encargado.Master</DependentUpon>
+    </Compile>
     <Compile Include="GuiaAmbiental.aspx.cs">
       <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,12 +214,33 @@
     <Compile Include="GuiaAmbiental.aspx.designer.cs">
       <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage.Master.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
+    <Compile Include="InicioAdministrador.aspx.cs">
+      <DependentUpon>InicioAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage.Master.designer.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
+    <Compile Include="InicioAdministrador.aspx.designer.cs">
+      <DependentUpon>InicioAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioEncargado.aspx.cs">
+      <DependentUpon>InicioEncargado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioEncargado.aspx.designer.cs">
+      <DependentUpon>InicioEncargado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recinto.aspx.cs">

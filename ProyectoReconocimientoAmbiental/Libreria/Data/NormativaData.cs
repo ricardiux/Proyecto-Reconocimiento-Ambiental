@@ -23,7 +23,6 @@ namespace Libreria.Data
             cmdNormativa.CommandText = "insertar_normativa";
             cmdNormativa.CommandType = System.Data.CommandType.StoredProcedure;
             cmdNormativa.Parameters.Add(new SqlParameter("@codAccion", normativa.CodNormativa));
-            cmdNormativa.Parameters.Add(new SqlParameter("@codSubcriterio", normativa.Subcriterio.CodSubcriterio));
             cmdNormativa.Parameters.Add(new SqlParameter("@titulo", normativa.Titulo));
             cmdNormativa.Parameters.Add(new SqlParameter("@detalle", normativa.Detalle));
 
@@ -70,7 +69,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     normativa.CodNormativa = Int32.Parse(dataReader["cod_normativa"].ToString());
-                    normativa.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     normativa.Titulo = dataReader["titulo"].ToString();
                     normativa.Detalle = dataReader["detalle"].ToString();
                 }
@@ -101,7 +99,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     normativa.CodNormativa = Int32.Parse(dataReader["cod_normativa"].ToString());
-                    normativa.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     normativa.Titulo = dataReader["titulo"].ToString();
                     normativa.Detalle = dataReader["detalle"].ToString();
                 }

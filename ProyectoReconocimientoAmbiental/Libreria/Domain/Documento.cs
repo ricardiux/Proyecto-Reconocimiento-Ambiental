@@ -14,14 +14,13 @@ namespace Libreria.Domain
         private String detalle;
         private String fuenteEmisor;
         private DateTime fecha;
-        private Subcriterio subcriterio;
 
         public Documento()
         {
-            subcriterio = new Subcriterio();
+
         }
 
-        public Documento(int codDocumento, string titulo, string tipoDocumento, string detalle, string fuenteEmisor, DateTime fecha, Subcriterio subcriterio)
+        public Documento(int codDocumento, string titulo, string tipoDocumento, string detalle, string fuenteEmisor, DateTime fecha)
         {
             this.codDocumento = codDocumento;
             this.titulo = titulo;
@@ -29,8 +28,7 @@ namespace Libreria.Domain
             this.detalle = detalle;
             this.fuenteEmisor = fuenteEmisor;
             this.fecha = fecha;
-            this.subcriterio = subcriterio;
-                    }
+        }
 
         public int CodDocumento { get => codDocumento; set => codDocumento = value; }
         public string Titulo { get => titulo; set => titulo = value; }
@@ -38,6 +36,5 @@ namespace Libreria.Domain
         public string Detalle { get => detalle; set => detalle = value; }
         public string FuenteEmisor { get => fuenteEmisor; set => fuenteEmisor = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
-        public Subcriterio Subcriterio { get => subcriterio; set => subcriterio = value; }
     }
 }

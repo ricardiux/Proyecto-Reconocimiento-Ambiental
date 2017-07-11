@@ -23,7 +23,6 @@ namespace Libreria.Data
             cmdAccion.CommandText = "insertar_accion";
             cmdAccion.CommandType = System.Data.CommandType.StoredProcedure;
             cmdAccion.Parameters.Add(new SqlParameter("@codAccion", accion.CodAccion));
-            cmdAccion.Parameters.Add(new SqlParameter("@codSubcriterio", accion.Subcriterio.CodSubcriterio));
             cmdAccion.Parameters.Add(new SqlParameter("@titulo", accion.Titulo));
             cmdAccion.Parameters.Add(new SqlParameter("@detalle", accion.Detalle));
 
@@ -70,7 +69,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     accion.CodAccion = Int32.Parse(dataReader["cod_accion"].ToString());
-                    accion.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     accion.Titulo = dataReader["titulo"].ToString();
                     accion.Detalle = dataReader["detalle"].ToString();
                 }
@@ -101,7 +99,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     accion.CodAccion = Int32.Parse(dataReader["cod_accion"].ToString());
-                    accion.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     accion.Titulo = dataReader["titulo"].ToString();
                     accion.Detalle = dataReader["detalle"].ToString();
                 }

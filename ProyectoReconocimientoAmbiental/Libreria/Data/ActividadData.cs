@@ -23,7 +23,6 @@ namespace Libreria.Data
             cmdActividad.CommandText = "insertar_actividad";
             cmdActividad.CommandType = System.Data.CommandType.StoredProcedure;
             cmdActividad.Parameters.Add(new SqlParameter("@codActividad", actividad.CodActividad));
-            cmdActividad.Parameters.Add(new SqlParameter("@codSubcriterio", actividad.Subcriterio.CodSubcriterio));
             cmdActividad.Parameters.Add(new SqlParameter("@titulo", actividad.Titulo));
             cmdActividad.Parameters.Add(new SqlParameter("@cantidadParticipantes", actividad.CantidadPraticipantes));
             cmdActividad.Parameters.Add(new SqlParameter("@tipoParticipantes", actividad.TipoParticipantes));
@@ -73,7 +72,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     actividad.CodActividad = Int32.Parse(dataReader["cod_actividad"].ToString());
-                    actividad.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     actividad.Titulo = dataReader["titulo"].ToString();
                     actividad.CantidadPraticipantes = Int32.Parse(dataReader["cantidad_participantes"].ToString());
                     actividad.TipoParticipantes = dataReader["tipo_participantes"].ToString();
@@ -107,7 +105,6 @@ namespace Libreria.Data
                 while (dataReader.Read())
                 {
                     actividad.CodActividad = Int32.Parse(dataReader["cod_actividad"].ToString());
-                    actividad.Subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
                     actividad.Titulo = dataReader["titulo"].ToString();
                     actividad.CantidadPraticipantes = Int32.Parse(dataReader["cantidad_participantes"].ToString());
                     actividad.TipoParticipantes = dataReader["tipo_participantes"].ToString();

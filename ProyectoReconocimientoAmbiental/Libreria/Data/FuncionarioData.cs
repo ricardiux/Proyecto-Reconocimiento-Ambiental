@@ -17,15 +17,14 @@ namespace Libreria.Data
             this.cadenaConexion = cadenaConexion;
         }
 
-        public Boolean FuncionarioRegistrado(String nombreUsuario, String contrasenia)
+        public Boolean FuncionarioRegistrado(String nombreUsuario)
         {
             Boolean registrado = false;
             SqlConnection connection = new SqlConnection(cadenaConexion);
-            string sqlProcedureObtenerEmpleado = "obtener_funcionario_login";
+            string sqlProcedureObtenerEmpleado = "obtener_funcionario_existente";
             SqlCommand comandoObteneFuncionario = new SqlCommand(sqlProcedureObtenerEmpleado, connection);
             comandoObteneFuncionario.CommandType = System.Data.CommandType.StoredProcedure;
             comandoObteneFuncionario.Parameters.Add(new SqlParameter("@nombreUsuario", nombreUsuario));
-            comandoObteneFuncionario.Parameters.Add(new SqlParameter("@contrasenia", contrasenia));
             try
             {
                 connection.Open();
@@ -66,7 +65,7 @@ namespace Libreria.Data
                     funcionario.Cedula = Int32.Parse(dataReader["cedula"].ToString());
                     funcionario.Nombre = dataReader["nombre_funcionario"].ToString();
                     funcionario.NombreUsuario = dataReader["nombre_usuario"].ToString();
-                    funcionario.Contrasenia = dataReader["contrasena"].ToString();
+                    funcionario.Contrasenia = dataReader["contrasenia"].ToString();
                     funcionario.Rol.CodRol = Int32.Parse(dataReader["cod_rol"].ToString());
                     funcionario.Rol.NombreRol = dataReader["nombre_rol"].ToString();
                 }

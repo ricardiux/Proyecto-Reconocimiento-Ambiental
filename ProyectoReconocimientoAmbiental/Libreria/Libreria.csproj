@@ -44,6 +44,7 @@
     <Compile Include="Business\ActividadBussines.cs" />
     <Compile Include="Business\ArchivoBussines.cs" />
     <Compile Include="Business\DocumentoBussines.cs" />
+    <Compile Include="Business\FuncionarioBusiness.cs" />
     <Compile Include="Business\GuiaBusiness.cs" />
     <Compile Include="Business\NormativaBussines.cs" />
     <Compile Include="Data\AccionAdministrativaData.cs" />
