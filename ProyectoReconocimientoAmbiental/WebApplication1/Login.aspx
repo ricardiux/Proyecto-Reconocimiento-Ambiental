@@ -24,7 +24,6 @@
             <br />
             <asp:Label ID="lblMensaje" runat="server" Font-Size="Medium" ForeColor="Red"></asp:Label>
             <br />
-
         </div>
     </section>
 </asp:Content>

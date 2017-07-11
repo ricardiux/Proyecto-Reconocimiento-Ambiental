@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Libreria.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,11 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Funcionario funcionario = (Funcionario)Session["usuario"];
+            if (funcionario == null || !funcionario.Rol.NombreRol.Equals("Administrador"))
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["usuario"] = null;
             lblMensaje.Visible = false;
         }
 
@@ -51,10 +52,14 @@ namespace WebApplication1
                     //Si el usuario existe y la contraseña es correcta, procedemos a verificar su rol
                     if (funcionario.Rol.NombreRol.Equals("Administrador"))
                     {
+                        //ponemos en sesión al administrador
+                        Session["usuario"] = funcionario;
                         Response.Redirect("InicioAdministrador.aspx");
                     }
                     else if (funcionario.Rol.NombreRol.Equals("Encargado"))
                     {
+                        //ponemos en sesión al encargado 
+                        Session["usuario"] = funcionario;
                         Response.Redirect("InicioEncargado.aspx");
                     }
                 }
