@@ -188,7 +188,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Recinto.aspx" />
     <Content Include="send-mail.php" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -243,13 +242,6 @@
       <DependentUpon>Login.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recinto.aspx.cs">
-      <DependentUpon>Recinto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recinto.aspx.designer.cs">
-      <DependentUpon>Recinto.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Libreria\Libreria.csproj">

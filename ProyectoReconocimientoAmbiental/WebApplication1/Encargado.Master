@@ -39,8 +39,10 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="scroll active"><a href="#">Inicio</a></li>
-                            <li class="scroll"><a href="#our-team">Área Temática</a></li>
-                            <li class="scroll"><a href="#portfolio">Evidencias</a></li>
+                            <li class="scroll"><a href="#our-team">Agregar Acción Administrativa</a></li>
+                            <li class="scroll"><a href="#portfolio">Agregar Normativa</a></li>
+                            <li class="scroll"><a href="#portfolio">Agregar Documento</a></li>
+                            <li class="scroll"><a href="#portfolio">Agregar Actividad</a></li>
                             <li class="scroll"><a href="#clients">Salir</a></li>
                         </ul>
                     </div>
