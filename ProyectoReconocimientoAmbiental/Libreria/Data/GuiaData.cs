@@ -70,5 +70,90 @@ namespace Libreria.Data
             }
             
         }
+
+        public LinkedList<Guia> BuscarGuiaPorCodigo(int cod_guia)
+        {
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            dataAdapter.SelectCommand = new SqlCommand();
+            dataAdapter.SelectCommand.Connection = conexion;
+            dataAdapter.SelectCommand.CommandText = "obtener_guia_por_cod";
+            dataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+            dataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@cod_Guia", cod_guia));
+
+
+            DataSet dataSet = new DataSet();
+
+            dataAdapter.Fill(dataSet, "Guia");
+
+            LinkedList<Guia> guia = new LinkedList<Guia>();
+
+            foreach (DataRow fila in dataSet.Tables["Guia"].Rows)
+            {
+                int codGuia = Int32.Parse(fila["cod_guia"].ToString());
+                String nombreGuia = fila["nombre_guia"].ToString();
+
+                int codArea = Int32.Parse(fila["cod_area"].ToString());
+                String nombreArea = fila["nombre_area"].ToString();
+                AreaTematica areaTematica = new AreaTematica();
+                areaTematica.CodArea = codArea;
+                areaTematica.NombreTematica = nombreArea;
+
+                int codFuncionario = Int32.Parse(fila["cod_funcionario"].ToString());
+                String nombreFuncionario = fila["nombre_funcionario"].ToString();
+                String cedula = fila["cedula"].ToString();
+                Funcionario funcionario = new Funcionario();
+                funcionario.CodFuncionario = codFuncionario;
+                funcionario.Nombre = nombreFuncionario;
+                funcionario.Cedula = Int32.Parse(cedula);
+
+                Guia guiaActual = new Guia(codGuia, nombreGuia, areaTematica, funcionario);
+                guia.AddLast(guiaActual);
+
+            }
+
+            return guia;
+
+        }
+
+        public LinkedList<Guia> ObtenerGuiasAmbientales()
+        {
+
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            dataAdapter.SelectCommand = new SqlCommand();
+            dataAdapter.SelectCommand.Connection = conexion;
+            dataAdapter.SelectCommand.CommandText = "obtener_guia_ambiental";
+            dataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            DataSet dataSet = new DataSet();
+
+            dataAdapter.Fill(dataSet, "Guia");
+
+            LinkedList<Guia> guia = new LinkedList<Guia>();
+
+            foreach (DataRow fila in dataSet.Tables["Guia"].Rows)
+            {
+                int codGuia = Int32.Parse(fila["cod_guia"].ToString());
+                String nombreGuia = fila["nombre_guia"].ToString();
+
+
+
+
+                guia.AddLast(new Guia(codGuia, nombreGuia));
+
+            }
+
+            return guia;
+
+        }
+
+
     }
 }

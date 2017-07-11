@@ -13,3 +13,8 @@ C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconoc
 C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.csprojResolveAssemblyReference.cache
 C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.dll
 C:\Users\Leo\Source\Definitivo\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.pdb
+C:\Users\Leo\Source\DefinitivoM\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.dll
+C:\Users\Leo\Source\DefinitivoM\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\bin\Debug\Libreria.pdb
+C:\Users\Leo\Source\DefinitivoM\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Source\DefinitivoM\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.dll
+C:\Users\Leo\Source\DefinitivoM\Proyecto-Reconocimiento-Ambiental\ProyectoReconocimientoAmbiental\Libreria\obj\Debug\Libreria.pdb

@@ -24,5 +24,10 @@ namespace Libreria.Business
         {
             guiaData.IngresarGuiaAmbiental(guia);
         }
+
+        public LinkedList<Guia> ObtenerGuiasAmbientales()
+        {
+            return guiaData.ObtenerGuiasAmbientales();
+        }
     }
 }

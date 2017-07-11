@@ -13,9 +13,11 @@ namespace Libreria.Domain
         private String nombreTematica;
 
         private Funcionario funcionario;
+        private Guia guia;
 
         public AreaTematica() {
-            Funcionario = new Funcionario();
+            funcionario = new Funcionario();
+            Guia = new Guia();
         }
 
         public AreaTematica(int codAreaTematica, string nombreTematica)
@@ -24,8 +26,15 @@ namespace Libreria.Domain
             this.nombreTematica = nombreTematica;
         }
 
-        public int CodAreaTematica { get => codArea; set => codArea = value; }
+        public AreaTematica(int codAreaTematica, string nombreTematica, Guia guia, Funcionario funcionario) : this(codAreaTematica, nombreTematica)
+        {
+            this.Guia = guia;
+            this.funcionario = funcionario;
+        }
+
+        public int CodArea { get => codArea; set => codArea = value; }
         public string NombreTematica { get => nombreTematica; set => nombreTematica = value; }
         public Funcionario Funcionario { get => funcionario; set => funcionario = value; }
+        public Guia Guia { get => guia; set => guia = value; }
     }
 }

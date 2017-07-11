@@ -43,6 +43,7 @@
     <Compile Include="Business\AccionAdministrativaBussines.cs" />
     <Compile Include="Business\ActividadBussines.cs" />
     <Compile Include="Business\ArchivoBussines.cs" />
+    <Compile Include="Business\AreaTematicaBusiness.cs" />
     <Compile Include="Business\DocumentoBussines.cs" />
     <Compile Include="Business\FuncionarioBusiness.cs" />
     <Compile Include="Business\GuiaBusiness.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Data\AccionAdministrativaData.cs" />
     <Compile Include="Data\ActividadData.cs" />
     <Compile Include="Data\ArchivoData.cs" />
+    <Compile Include="Data\AreaTematicaData.cs" />
     <Compile Include="Data\DocumentoData.cs" />
     <Compile Include="Data\FuncionarioData.cs" />
     <Compile Include="Data\GuiaData.cs" />

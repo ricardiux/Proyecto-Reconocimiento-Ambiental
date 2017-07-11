@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AreasTematicas.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -74,9 +75,11 @@
     <Content Include="css\prettyPhoto.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="EncargadosTematicas.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GuiaAmbiental.aspx" />
+    <Content Include="GestionAmbiental.aspx" />
     <Content Include="images\about-us\about.jpg" />
     <Content Include="images\about-us\community.jpg" />
     <Content Include="images\about-us\mission.jpg" />
@@ -199,6 +202,13 @@
     <Compile Include="Administrador.Master.designer.cs">
       <DependentUpon>Administrador.Master</DependentUpon>
     </Compile>
+    <Compile Include="AreasTematicas.aspx.cs">
+      <DependentUpon>AreasTematicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreasTematicas.aspx.designer.cs">
+      <DependentUpon>AreasTematicas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Encargado.Master.cs">
       <DependentUpon>Encargado.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -206,12 +216,19 @@
     <Compile Include="Encargado.Master.designer.cs">
       <DependentUpon>Encargado.Master</DependentUpon>
     </Compile>
-    <Compile Include="GuiaAmbiental.aspx.cs">
-      <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
+    <Compile Include="EncargadosTematicas.aspx.cs">
+      <DependentUpon>EncargadosTematicas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GuiaAmbiental.aspx.designer.cs">
-      <DependentUpon>GuiaAmbiental.aspx</DependentUpon>
+    <Compile Include="EncargadosTematicas.aspx.designer.cs">
+      <DependentUpon>EncargadosTematicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionAmbiental.aspx.cs">
+      <DependentUpon>GestionAmbiental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionAmbiental.aspx.designer.cs">
+      <DependentUpon>GestionAmbiental.aspx</DependentUpon>
     </Compile>
     <Compile Include="InicioAdministrador.aspx.cs">
       <DependentUpon>InicioAdministrador.aspx</DependentUpon>

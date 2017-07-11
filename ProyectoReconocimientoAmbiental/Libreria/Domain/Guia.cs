@@ -14,9 +14,25 @@ namespace Libreria.Domain
         private int anioAprobacion;
         private Boolean vigente;
         private LinkedList<AreaTematica> listaAreasTematicas;
+        private AreaTematica areaTematica;
+        private Funcionario funcionario;
 
         public Guia() {
             this.ListaAreasTematicas = new LinkedList<AreaTematica>();
+        }
+
+        public Guia(int codGuia, string nombreGuia)
+        {
+            this.codGuia = codGuia;
+            this.nombreGuia = nombreGuia;
+        }
+
+        public Guia(int codGuia, string nombreGuia, AreaTematica areaTematica, Funcionario funcionario)
+        {
+            this.codGuia = codGuia;
+            this.nombreGuia = nombreGuia;
+            this.areaTematica = areaTematica;
+            this.funcionario = funcionario;
         }
 
         public int CodGuia { get => codGuia; set => codGuia = value; }
