@@ -39,5 +39,35 @@ namespace Libreria.Data
                 connection.Close();
             }
         }
+        public LinkedList<Subcriterio> ObtenerSubcriteriosPorCriterio(int codCriterio)
+        {
+            SqlConnection connection = new SqlConnection(cadenaConexion);
+            string sqlProcedureObtenerSubcriterios = "obtener_subcriterios_por_criterio";
+            SqlCommand comandoObteneSubcriterios = new SqlCommand(sqlProcedureObtenerSubcriterios, connection);
+            comandoObteneSubcriterios.CommandType = System.Data.CommandType.StoredProcedure;
+            comandoObteneSubcriterios.Parameters.Add(new SqlParameter("@codCriterio", codCriterio));
+            try
+            {
+                connection.Open();
+                SqlDataReader dataReader = comandoObteneSubcriterios.ExecuteReader();
+                LinkedList<Subcriterio> listaSubcriterios = new LinkedList<Subcriterio>();
+                while (dataReader.Read())
+                {
+                    Subcriterio subcriterio = new Subcriterio();
+                    subcriterio.CodSubcriterio = Int32.Parse(dataReader["cod_subcriterio"].ToString());
+                    subcriterio.NombreSubcriterio = dataReader["nombre_subcriterio"].ToString();
+                    listaSubcriterios.AddLast(subcriterio);
+                }
+                return listaSubcriterios;
+            }
+            catch (SqlException exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

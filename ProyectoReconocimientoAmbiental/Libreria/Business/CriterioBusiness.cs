@@ -29,5 +29,17 @@ namespace Libreria.Business
                 throw exc;
             }
         }
+
+        public LinkedList<Criterio> ObtenerCriteriosPorArea(int codArea)
+        {
+            try
+            {
+                return this.criterioData.ObtenerCriteriosPorArea(codArea);
+            }
+            catch (SqlException exc)
+            {
+                throw exc;
+            }
+        }
     }
 }

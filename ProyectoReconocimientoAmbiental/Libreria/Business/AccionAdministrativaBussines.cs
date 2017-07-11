@@ -17,9 +17,9 @@ namespace Libreria.Business
             accionAdministrativaData = new AccionAdministrativaData(cadenaConexion);
         }
 
-        public void InsertarAccion(AccionAdministrativa accion)
+        public void InsertarAccion(AccionAdministrativa accion, int codSubcriterio)
         {
-            accionAdministrativaData.InsertarAccion(accion);
+            accionAdministrativaData.InsertarAccion(accion, codSubcriterio);
         }
 
         public void ObtenerAccionAdministrativaPorId(int idAccion)

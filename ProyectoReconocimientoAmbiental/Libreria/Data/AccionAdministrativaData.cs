@@ -17,12 +17,13 @@ namespace Libreria.Data
             this.connectionString = connectionString;
         }
 
-        public AccionAdministrativa InsertarAccion(AccionAdministrativa accion)
+        public AccionAdministrativa InsertarAccion(AccionAdministrativa accion, int codSubcriterio)
         {
             SqlCommand cmdAccion = new SqlCommand();
             cmdAccion.CommandText = "insertar_accion";
             cmdAccion.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdAccion.Parameters.Add(new SqlParameter("@codAccion", accion.CodAccion));
+            cmdAccion.Parameters.Add(new SqlParameter("@codSubcriterio", codSubcriterio));
+            cmdAccion.Parameters.Add(new SqlParameter("@codAccion",accion.CodAccion));
             cmdAccion.Parameters.Add(new SqlParameter("@titulo", accion.Titulo));
             cmdAccion.Parameters.Add(new SqlParameter("@detalle", accion.Detalle));
 
@@ -36,7 +37,18 @@ namespace Libreria.Data
                 cmdAccion.Transaction = transaction;
                 cmdAccion.ExecuteNonQuery();
                 accion.CodAccion = Int32.Parse(cmdAccion.Parameters["@codAccion"].Value.ToString());
+                //Para insertar el archivo
+                SqlCommand cmdArchivo = new SqlCommand();
+                cmdArchivo.CommandText = "insertar_archivo_informe";
+                cmdArchivo.CommandType = System.Data.CommandType.StoredProcedure;
 
+                cmdArchivo.Parameters.Add(new SqlParameter("@codAccion", accion.CodAccion));
+                cmdArchivo.Parameters.Add(new SqlParameter("@nombre", accion.Archivo.Nombre));
+                cmdArchivo.Parameters.Add(new SqlParameter("@tipoArchivo", accion.Archivo.TipoArchivo));
+                cmdArchivo.Parameters.Add(new SqlParameter("@datos", accion.Archivo.Datos));
+
+                cmdArchivo.Transaction = transaction;
+                cmdArchivo.ExecuteNonQuery();
                 transaction.Commit();
             }
             catch (SqlException ex)

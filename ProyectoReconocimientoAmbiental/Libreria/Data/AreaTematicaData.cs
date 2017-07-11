@@ -101,36 +101,5 @@ namespace Libreria.Data
             }
         }
 
-        public LinkedList<Criterio> ObtenerCriteriosPorArea(int codArea)
-        {
-            SqlConnection connection = new SqlConnection(cadenaConexion);
-            string sqlProcedureObtenerCriterios = "obtener_criterios_por_area";
-            SqlCommand comandoObteneCriterios = new SqlCommand(sqlProcedureObtenerCriterios, connection);
-            comandoObteneCriterios.CommandType = System.Data.CommandType.StoredProcedure;
-            comandoObteneCriterios.Parameters.Add(new SqlParameter("@codArea", codArea));
-            try
-            {
-                connection.Open();
-                SqlDataReader dataReader = comandoObteneCriterios.ExecuteReader();
-                LinkedList<Criterio> listaCriterios = new LinkedList<Criterio>();
-                while (dataReader.Read())
-                {
-                    Criterio criterio = new Criterio();
-                    criterio.CodCriterio = Int32.Parse(dataReader["cod_criterio"].ToString());
-                    criterio.NombreCriterio = dataReader["nombre_criterio"].ToString();
-                    listaCriterios.AddLast(criterio);
-                }
-                return listaCriterios;
-            }
-            catch (SqlException exc)
-            {
-                throw exc;
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
     }
 }
