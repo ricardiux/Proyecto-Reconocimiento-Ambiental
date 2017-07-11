@@ -11,7 +11,6 @@ namespace Libreria.Business
    public class GuiaBusiness
     {
 
-        private String cadenaConexion;
         private GuiaData guiaData;
 
         public GuiaBusiness(string cadenaConexion)

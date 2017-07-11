@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarCriterio.aspx" />
+    <Content Include="AgregarSubcriterio.aspx" />
     <Content Include="AreasTematicas.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -210,6 +211,13 @@
     </Compile>
     <Compile Include="AgregarCriterio.aspx.designer.cs">
       <DependentUpon>AgregarCriterio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarSubcriterio.aspx.cs">
+      <DependentUpon>AgregarSubcriterio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarSubcriterio.aspx.designer.cs">
+      <DependentUpon>AgregarSubcriterio.aspx</DependentUpon>
     </Compile>
     <Compile Include="AreasTematicas.aspx.cs">
       <DependentUpon>AreasTematicas.aspx</DependentUpon>

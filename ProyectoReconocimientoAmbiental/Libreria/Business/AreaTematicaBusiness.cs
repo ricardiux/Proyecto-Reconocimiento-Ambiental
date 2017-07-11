@@ -15,9 +15,7 @@ namespace Libreria.Business
         public AreaTematicaBusiness(string cadenaConexion)
         {
             areaTematicaData = new AreaTematicaData(cadenaConexion);
-
         }
-
 
         public LinkedList<AreaTematica> BuscarAreaTematicaPorGuia(int codGuia)
         {

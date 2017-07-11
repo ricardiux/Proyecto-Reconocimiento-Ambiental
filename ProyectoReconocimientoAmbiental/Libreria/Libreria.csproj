@@ -49,6 +49,7 @@
     <Compile Include="Business\FuncionarioBusiness.cs" />
     <Compile Include="Business\GuiaBusiness.cs" />
     <Compile Include="Business\NormativaBussines.cs" />
+    <Compile Include="Business\SubcriterioBusiness.cs" />
     <Compile Include="Data\AccionAdministrativaData.cs" />
     <Compile Include="Data\ActividadData.cs" />
     <Compile Include="Data\ArchivoData.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Data\FuncionarioData.cs" />
     <Compile Include="Data\GuiaData.cs" />
     <Compile Include="Data\NormativaData.cs" />
+    <Compile Include="Data\SubcriterioData.cs" />
     <Compile Include="Domain\Actividad.cs" />
     <Compile Include="Domain\Archivo.cs" />
     <Compile Include="Domain\AreaTematica.cs" />

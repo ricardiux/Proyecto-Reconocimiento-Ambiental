@@ -10,7 +10,6 @@ namespace Libreria.Business
 {
     public class AccionAdministrativaBussines
     {
-        private String cadenaConexion;
         private AccionAdministrativaData accionAdministrativaData;
 
         public AccionAdministrativaBussines(string cadenaConexion)

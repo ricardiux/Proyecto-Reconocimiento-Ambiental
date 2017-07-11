@@ -10,7 +10,6 @@ namespace Libreria.Business
 {
     public class NormativaBussines
     {
-        private String cadenaConexion;
         private NormativaData normativaData;
 
         public NormativaBussines(string cadenaConexion)
