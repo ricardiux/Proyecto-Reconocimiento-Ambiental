@@ -60,6 +60,8 @@ namespace WebApplication1
                     {
                         //ponemos en sesión al encargado 
                         Session["usuario"] = funcionario;
+                        AreaTematica areaTematica = funcionarioBusiness.ObtenerObtenerAreaTematicaPorFuncionario(funcionario.CodFuncionario);
+                        Session["areaTematica"] = areaTematica;
                         Response.Redirect("InicioEncargado.aspx");
                     }
                 }

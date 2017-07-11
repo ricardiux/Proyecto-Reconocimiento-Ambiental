@@ -14,19 +14,11 @@ namespace Libreria.Domain
         private String tipoParticipantes;
         private DateTime fecha;
         private String descripcion;
+        private LinkedList<Archivo> listaArchivos;
 
         public Actividad()
         {
-        }
-
-        public Actividad(int codActividad, string titulo, int cantidadPraticipantes, string tipoParticipantes, DateTime fecha, string descripcion)
-        {
-            this.codActividad = codActividad;
-            this.titulo = titulo;
-            this.cantidadPraticipantes = cantidadPraticipantes;
-            this.tipoParticipantes = tipoParticipantes;
-            this.fecha = fecha;
-            this.descripcion = descripcion;
+            this.ListaArchivos = new LinkedList<Archivo>();
         }
 
         public int CodActividad { get => codActividad; set => codActividad = value; }
@@ -35,5 +27,6 @@ namespace Libreria.Domain
         public string TipoParticipantes { get => tipoParticipantes; set => tipoParticipantes = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
+        public LinkedList<Archivo> ListaArchivos { get => listaArchivos; set => listaArchivos = value; }
     }
 }

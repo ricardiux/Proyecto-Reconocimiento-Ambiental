@@ -14,20 +14,11 @@ namespace Libreria.Domain
         private String detalle;
         private String fuenteEmisor;
         private DateTime fecha;
+        private Archivo archivo;
 
         public Documento()
         {
-
-        }
-
-        public Documento(int codDocumento, string titulo, string tipoDocumento, string detalle, string fuenteEmisor, DateTime fecha)
-        {
-            this.codDocumento = codDocumento;
-            this.titulo = titulo;
-            this.tipoDocumento = tipoDocumento;
-            this.detalle = detalle;
-            this.fuenteEmisor = fuenteEmisor;
-            this.fecha = fecha;
+            this.Archivo = new Archivo();
         }
 
         public int CodDocumento { get => codDocumento; set => codDocumento = value; }
@@ -36,5 +27,6 @@ namespace Libreria.Domain
         public string Detalle { get => detalle; set => detalle = value; }
         public string FuenteEmisor { get => fuenteEmisor; set => fuenteEmisor = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
+        public Archivo Archivo { get => archivo; set => archivo = value; }
     }
 }

@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarCriterio.aspx" />
     <Content Include="AreasTematicas.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -191,6 +192,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ResultadoEncargado.aspx" />
     <Content Include="send-mail.php" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -201,6 +203,13 @@
     </Compile>
     <Compile Include="Administrador.Master.designer.cs">
       <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarCriterio.aspx.cs">
+      <DependentUpon>AgregarCriterio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarCriterio.aspx.designer.cs">
+      <DependentUpon>AgregarCriterio.aspx</DependentUpon>
     </Compile>
     <Compile Include="AreasTematicas.aspx.cs">
       <DependentUpon>AreasTematicas.aspx</DependentUpon>
@@ -259,6 +268,13 @@
       <DependentUpon>Login.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoEncargado.aspx.cs">
+      <DependentUpon>ResultadoEncargado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultadoEncargado.aspx.designer.cs">
+      <DependentUpon>ResultadoEncargado.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Libreria\Libreria.csproj">

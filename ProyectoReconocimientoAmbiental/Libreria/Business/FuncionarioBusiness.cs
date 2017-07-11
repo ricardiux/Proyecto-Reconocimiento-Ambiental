@@ -41,5 +41,17 @@ namespace Libreria.Business
                 throw exc;
             }
         }
+
+        public AreaTematica ObtenerObtenerAreaTematicaPorFuncionario(int codFuncionario)
+        {
+            try
+            {
+                return this.funcionarioData.ObtenerObtenerAreaTematicaPorFuncionario(codFuncionario);
+            }
+            catch (SqlException exc)
+            {
+                throw exc;
+            }
+        }
     }
 }

@@ -80,5 +80,35 @@ namespace Libreria.Data
                 connection.Close();
             }
         }//ObtenerFuncionarioLogin
+
+        public AreaTematica ObtenerObtenerAreaTematicaPorFuncionario(int codFuncionario)
+        {
+            SqlConnection connection = new SqlConnection(cadenaConexion);
+            string sqlProcedureObtenerArea = "obtener_area_tematica_por_funcionario";
+            SqlCommand comandoObteneArea = new SqlCommand(sqlProcedureObtenerArea, connection);
+            comandoObteneArea.CommandType = System.Data.CommandType.StoredProcedure;
+            comandoObteneArea.Parameters.Add(new SqlParameter("@codFuncionario", codFuncionario));
+            try
+            {
+                connection.Open();
+                SqlDataReader dataReader = comandoObteneArea.ExecuteReader();
+                AreaTematica areaTematica = new AreaTematica();
+                while (dataReader.Read())
+                {
+                    areaTematica.CodArea = Int32.Parse(dataReader["cod_area"].ToString());
+                    areaTematica.NombreTematica = dataReader["nombre_area"].ToString();
+                }
+                return areaTematica;
+            }
+            catch (SqlException exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }//ObtenerAreaTematica
+
     }
 }
