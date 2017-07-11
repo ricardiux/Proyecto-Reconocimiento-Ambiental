@@ -40,7 +40,7 @@ namespace WebApplication1
             guia.AnioAprobacion = Int32.Parse(tbAnio.Text);
             guia.Vigente = true;
 
-            if (lbAreasTematicas.Items.Count > -1)
+            if (lbAreasTematicas.Items.Count >0 )
             {
                 for (int i = 0; i < lbAreasTematicas.Items.Count; i++)
                 {
@@ -58,9 +58,7 @@ namespace WebApplication1
 
                 Response.Redirect("~/EncargadosTematicas.aspx?codGuia=" + guia.CodGuia);
             }
-            else {
-                lbMensaje.Text = "Agregue una area tematica";
-            }
+            
 
           
         }

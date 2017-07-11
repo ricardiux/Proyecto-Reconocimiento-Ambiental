@@ -42,10 +42,7 @@
             <br />
                 <br />
 
-        <asp:Label ID="Label1" runat="server" Text="Filtrar"></asp:Label>
-        <asp:TextBox ID="tbGuia" runat="server"></asp:TextBox>
-        
-        <asp:Button ID="Button2" runat="server" Text="Button" />
+       
   
     <br />
     <br />
